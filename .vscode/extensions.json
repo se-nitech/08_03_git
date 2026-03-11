@@ -8,7 +8,5 @@
         "ms-python.pylint",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "visualstudioexptteam.vscodeintellicode-completions",
-        "visualstudioexptteam.vscodeintellicode",
     ]
 }
