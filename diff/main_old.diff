@@ -1,0 +1,11 @@
+--- main_old.py	2026-03-13 12:33:42
++++ main.py	2026-03-13 12:33:47
+@@ -1,7 +1,7 @@
+ 
+ 
+ def calculate_weights(x, y):
+-    z = 2 * x - y + 1
++    z = 2 * x - y
+     return z
+ 
+ 

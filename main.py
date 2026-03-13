@@ -1,24 +1,38 @@
 
 
-
-def myfunc(x, y):
-    z = 2 * x - y + 1
+# today's new version
+def calculate_weights(x, y):
+    z = 2 * x - y * 0.99
     return z
 
+## equation modified
+# def calculate_weights(x, y):
+#     z = 2 * x - y
+#     return z
 
-def myfunc_3(a):
-    for i in range(5):
-        myfunc(a[i], a[i + 1])
+## # a simple mistake ...
+## def calculate_weights(x, y):
+##     z = 2 * x - y + 1
+##     return z
 
-def myfunc_4(a):
-    z = a[1] + a[2]
+## # # new version
+## # def calculate_weights(x, y):
+## #     z = 2 * x - z + 1
+## #     return z
+
+#### def calculate_weights(x, y):
+####     z = 2 * x - y
+####     return z
+
+
+def apply_to_adjacent_pairs(a):
+    for i in range(len(a) - 1):
+        calculate_weights(a[i], a[i + 1])
+
 
 def main():
     a = [1, 2, 3, 4, 5]
-    for _ in range(100):
-        myfunc_4(a)
-    for _ in range(300):
-        myfunc_3(a)
+    apply_to_adjacent_pairs(a)
 
 
 if __name__ == '__main__':

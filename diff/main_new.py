@@ -1,23 +1,22 @@
 
 
-def myfunc(x, y):
+def calculate_weights(x, y):
     z = 2 * x - y
     return z
 
 
-def myfunc_3(a):
-    for i in range(5):
-        myfunc(a[i], a[i + 1])
+def apply_to_adjacent_pairs(a):
+    for i in range(len(a) - 1):
+        calculate_weights(a[i], a[i + 1])
 
-def myfunc_4(a):
-    z = a[1] + a[2]
+def show_sample_result(a):
+    result = calculate_weights(a[2], a[1])
+    print(f"sample result: {result}")
 
 def main():
     a = [1, 2, 3, 4, 5]
-    for _ in range(100):
-        myfunc_4(a)
-    for _ in range(300):
-        myfunc_3(a)
+    apply_to_adjacent_pairs(a)
+    show_sample_result(a)
 
 
 if __name__ == '__main__':
